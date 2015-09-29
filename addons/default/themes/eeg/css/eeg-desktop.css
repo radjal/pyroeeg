@@ -1,0 +1,217 @@
+/* CSS for large screens */
+@charset "utf-8";
+
+body.desktop {
+	/* background-image: url(../img/page-bckgrnd.gif); */
+	/* background-repeat: repeat; */
+	/* background-position: left top; */
+}
+/************ header and top ************/
+#header.desktop {
+	background-image: url(../img/top-bckgrnd.gif);
+	/* background-color: transparent; */
+	background-repeat: repeat;
+	background-position: center top;
+	/* height: 220px; */
+	position: relative;
+	padding: 0;
+	z-index: 20;
+}
+#site_navigation.desktop {
+	position: relative;
+	top: 88px;
+	width: 100%;
+	height: 49px;
+	padding: 5px;
+	border-top: solid 4px #908758;
+	border-bottom: solid 4px #908758;
+	background-color: #efe6ba;
+	padding-left: 10%;
+	padding-right: 10%;
+	line-height: 1.4em;
+	font-size: 1.4em;
+	/* display: inline; */
+	text-align: center;
+}
+#top-logo.desktop {
+	width: 190px;
+	float: left;
+	height: 120px;
+	background-image: url(../img/hatandveggies.png);
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position: 2px 25px;
+	position: relative;
+	left: 60px;
+	bottom: 60px;
+	display: block;
+}
+#site_title.desktop {
+	/* font-family: 'Edwardian Script ITC'; */
+	font-size: 4.8em;
+	/* letter-spacing: 10px; */
+	/* font-weight: bold; */
+	/* color: #f08012; */
+	/* display: none; */
+	position: relative;
+	top: -50px;
+	left: -121px;
+	text-align: center;
+}
+#site_slogan.desktop{
+    top: -78px;
+    /* left: 40%; */
+    /* width: 80%; */
+    /* font-size: 1.2em; */
+    /* font-family: 'ftq'; */
+    text-align: center;
+}
+#top.desktop {
+	width: 100%;
+	margin: auto;
+	/* background-image: url(../img/top.jpg); */
+	background-repeat: no-repeat;
+	/* height:163px; */
+}
+/************ page central content ************/
+#content-wrapper.desktop {
+	width: 100%;
+	margin: auto;
+	/* padding-top: 30px; */
+	/* margin-top: -13px; */
+	/* background-color: #FFF; */
+	padding-top: 40px;
+	/* -webkit-box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5); */
+	-moz-box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5);
+	/* box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5); */
+	/* position: relative; */
+	/* z-index: 5; */
+	clear: both;
+	position: relative;
+	top: -85px;
+	/* clear: both; */
+}
+#content.desktop {
+	padding: 20px;
+	margin: auto;
+	/* width: 80%; */
+	text-align: center;
+	/* padding-top: 20px; */
+}
+/************ bottom and footer ************/
+#footer.desktop {
+	/* background-color: #efe6ba; */
+	/* position: relative; */
+	/* z-index: 10; */
+	/* background-image: url(../img/page-bckgrnd-bottom.gif); */
+	/* background-repeat: repeat; */
+	/* background-position: center top; */
+	/* position: relative; */  
+	/* top: -100px; */
+	padding: 20px;
+	/* clear: both; */
+}
+#bottom.desktop {
+	width: 960px;
+	margin: auto;
+	/* background-color: #333; */
+	/* -webkit-box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5); */
+	-moz-box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5);
+	/* box-shadow: 0px 20px 90px 30px rgba(0,0,0,0.5); */
+	/* min-height: 220px; */
+}
+#bottom-bar.desktop {
+	/* width: 960px; */
+	/* margin: auto; */
+	/* position: relative; */
+	/* top: -83px; */
+	/* background-image: url(../img/bottom-bar.png); */
+	/* background-repeat: no-repeat; */
+	/* background-position: center top; */
+	/* height: 83px; */
+}
+#bottom-menu.desktop {
+	color: white;
+	/* position: relative; */
+	/* top: -58px; */
+	/* padding: 20px; */
+	/* float: left; */
+}
+#bottom-logo.desktop {
+	/* float: right; */
+	position: relative;
+	top: -130px;
+	left: 600px;
+}
+/************ menu and other elements ************/
+.semaine-titre.desktop, .carte-titre.desktop  {
+    font-family: archisticobold;
+    font-size: 2em;
+    text-align: center;
+    color: #F7B16D;
+    letter-spacing: 4px; 
+}
+
+.semaine-jour.desktop {
+    float: left;
+    width: 200px;
+    height: 328px;
+    background-color: grey;
+    margin: 2px;
+    padding: 10px;
+    background-image: url(../img/blackboard.png);  
+    background-repeat: no-repeat;  background-position: left top;
+    font-family: eraserdust;
+    color: white;
+    font-size: 2em;
+    /* background-size: cover; */
+}
+.carte-info.desktop {
+    text-align: center;  color: #f08012;
+    font-size: 4em;
+    font-family: 'Edwardian Script ITC';
+}
+.commande.desktop {
+    float: left;
+    /* clear: both; */
+    width: 400px;
+    height: 300px;
+    background-image: url(../img/top-bckgrnd.gif);  /* background-color: transparent; */  background-repeat: repeat;  background-position: center top;
+    border-radius: 8px;
+    border: #908758 1px solid;
+    -webkit-border-radius: 8px;  -moz-border-radius: 8px;  border-radius: 8px;
+}
+.info-paiement.desktop {
+    float: right;
+    /* clear: both; */  width: 400px;  height: 300px;  background-image: url(../img/top-bckgrnd.gif);  /* background-color: transparent; */  background-repeat: repeat;  background-position: center top;
+    border-radius: 8px;
+    border: #908758 1px solid;
+    -webkit-border-radius: 8px;  -moz-border-radius: 8px;  border-radius: 8px;
+}
+#cartouche-wrapper.desktop {
+    text-align: center;  
+    margin: 10px auto 10px auto;  
+    width: 1020px;  
+    clear: both;;
+    /* border-radius: 3px; */
+}
+/* ---- firesale checkout overload */
+#checkout {
+    width: 700px;
+    margin: auto;
+}
+.firesale#checkout fieldset > div > ul:nth-child(odd) {
+    /* float: none; */
+}
+.firesale#checkout fieldset > div > ul:nth-child(even) {
+    /* float: none; */
+}
+/* ---- users overload */
+#user_profile_container li {
+	list-style-type: none;
+}
+#user_profile_container {
+}
+/* ---- contact form ---- */
+#contact-form-wrapper.desktop {
+}

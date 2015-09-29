@@ -1,0 +1,303 @@
+.rsd-w-medium .widget>div:first-of-type{}
+#rsd-h-small {}
+#rsd-h-high {}
+
+/*********   header      *********/
+
+header.rsd-w-narrow {} 
+header.rsd-w-medium {} 
+header.rsd-w-large {} 
+
+/*********   header wrapper    *********/
+
+#headerWrapper.rsd-w-narrow {
+    width: 100%;
+}
+#headerWrapper.rsd-w-medium {}
+#headerWrapper.rsd-w-large {}
+
+/*********   image title     *********/
+#title-img.rsd-w-narrow {}
+#title-img.rsd-w-medium {}
+#title-img.rsd-w-large {}
+#title-img.rsd-w-xlarge {}
+
+/*********   logo      *********/
+
+#logo.rsd-w-narrow {
+    width: 20%;
+    display: none;
+} 
+#logo.rsd-w-medium {} 
+#logo.rsd-w-large {} 
+
+/*********   site title      *********/
+
+#site_title.rsd-w-narrow {
+    width: 600px;  margin: auto;
+    display: none;
+} 
+#site_title.rsd-w-medium {} 
+#site_title.rsd-w-large {} 
+
+/*********   nav     *********/
+
+#head-nav.rsd-w-narrow {
+    /* overflow: visible; */
+    /* display: block; */
+    height: 48px;
+    /* background-image: none; */
+    background-size: contain;
+    /* line-height: 26px; */
+}
+#head-nav.rsd-w-medium {
+    /* height: 40px; */
+    overflow: visible;
+    /* display: block; */
+    /* height: 70px; */  
+    /* height: 48px; */
+    /* background-image: none; */  
+    background-size: contain;  
+    line-height: 26px;
+}
+#head-nav.rsd-w-large {}
+#head-nav.rsd-w-narrow li {
+    height: 25px;
+    /* line-height: 30px; */
+    display: inline-block;
+} 
+
+/*********   bottom      *********/
+#bottomWidgets.rsd-w-large {}          
+#bottomWidgets.rsd-w-medium div.widget{
+    /* float: none; */
+    display: inline-block;
+    /* width: 186px; */
+}
+#bottomWidgets.rsd-w-medium {
+    float: none;
+    clear: both;
+    width: 100%;
+    /* width: 800px; */
+    /* margin: auto; */
+}
+#bottomWidgets.rsd-w-narrow {
+/* width: 746px; */
+/* width: 100%; */
+width: 650px;
+margin: auto;
+/* min-height: 200px; */
+float: none;
+/* background-color: aliceblue; */
+}
+#bottomWidgets.rsd-w-narrow div.widget{
+float: none;
+/* clear: both; */
+width: 100%;
+width: 650px;
+margin: auto;
+/* min-height: 5px; */
+background-size: cover;
+background-image: url(../img/shadow-large.png);
+/* background: none; */
+/* margin: 0; */
+}
+                               
+/************ content wrapper ***********/
+
+#contentWrapper.rsd-w-narrow {
+    width: 800px;
+    width: 100%;
+    /* margin: 0; */;
+    /* margin-right: 38px; */
+}
+#contentWrapper.rsd-w-medium {
+    width: 1040px;
+}
+#contentWrapper.rsd-w-large {
+    /* width: 1030px; */
+}
+#contentWrapper.rsd-w-xlarge {
+    width: 1700px;
+}
+
+/*********   content double      *********/
+
+#content-double.rsd-w-xlarge {
+    /* width: 1330px; */
+    width: 1459px;
+    float: left;
+}  
+#content-double.rsd-w-large {
+    width: 1026px;
+    float: left;
+}          
+#content-double.rsd-w-medium div.carte{
+    width: 276px;
+    /* min-height: 269px; */
+    width: 43%;
+}#content-double.rsd-w-medium {
+    width: 778px;
+    float: left;
+}
+#content-double.rsd-w-narrow section.post div.carte-semaine-wrapper{} 
+#content-double.rsd-w-narrow {
+    /* width: 70%; */
+    float: none;
+    clear: both;
+    margin: auto;
+    width: 100%;
+}
+
+/*********   content  *********/
+
+#content.rsd-w-large {
+    /* width: 100%; */
+} 
+#content.rsd-w-medium {
+    /* width: 830px; */
+} 
+#content.rsd-w-narrow {
+    width: 800px;
+    width: 100%;
+} 
+/*********   content carte semaine  *********/
+#content.rsd-w-large div.cartesemaine div.carte{
+    width: 42%;
+    min-height: 272px;
+}
+#content.rsd-w-medium div.cartesemaine div.carte{}
+#content.rsd-w-narrow div.cartesemaine div.carte{
+    width: 90%;
+    /* padding: 20px; */
+}
+
+/*********   content carte jour  *********/
+
+#content.rsd-w-large div.caretejour div.carte{
+ 
+}
+#content.rsd-w-medium div.caretejour div.carte{}
+#content.rsd-w-narrow div.caretejour div.carte{
+ 
+}
+
+/*********   side widgets     *********/
+
+#sideWidgets.rsd-w-large {} 
+#sideWidgets.rsd-w-medium {
+    /* float: none; */
+} 
+#sideWidgets.rsd-w-narrow{
+width: 630px;
+float: none;
+margin: auto;
+}
+#sideWidgets.rsd-w-narrow div.widget {
+    width: 305px;
+    /* width: 24%; */
+    /* height: 320px; */
+    /* height: 25%; */
+    /* min-width: 180px; */
+    /* min-height: 180px; */
+} 
+
+#sideWidgets.rsd-w-narrow .html-widget-wrapper{}
+#sideWidgets.rsd-w-medium .html-widget-wrapper{}
+#sideWidgets.rsd-w-large .html-widget-wrapper{}
+
+#sideWidgets.rsd-w-narrow .widget.google_maps>div {
+    width: 23%;
+    width: 310px !important;
+    /* height: 265px !important; */
+}
+#sideWidgets.rsd-w-medium .widget.google_maps>div {
+    width: 236px;
+    width: 236px !important;
+}
+#sideWidgets.rsd-w-large .widget.google_maps>div {
+    width: 236px !important;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+#sideWidgets.rsd-w-xlarge .widget.google_maps>div {
+    width: 236px !important;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+/*********   footer wrapper   *********/
+#footerWrapper.rsd-w-narrow {}
+#footerWrapper.rsd-w-medium {}
+#footerWrapper.rsd-w-large {}
+
+/*********   footer widgets     *********/
+
+#footerWidgets.rsd-w-xlarge {
+    width: 1034px;
+    /* float: left; */
+}
+#footerWidgets.rsd-w-large {
+    width: 1045px;
+    /* float: left; */
+} 
+#footerWidgets.rsd-w-medium {
+    width: 1027px;
+    clear: both;
+} 
+#footerWidgets.rsd-w-narrow {
+    width: 800px;
+    /* width: 100%; */
+} 
+
+#footerWidgets.rsd-w-narrow div.widget{
+    width: 24%;
+}
+#footerWidgets.rsd-w-medium div.widget{}
+#footerWidgets.rsd-w-large div.widget{}
+
+/*********    posts   *********/
+
+#content.rsd-w-narrow section.post {
+    float: none;
+    /* width: 100%; */
+    margin: auto;
+}
+#content.rsd-w-medium section.post {}
+#content.rsd-w-large section.post {
+    /* width: 1200px; */  
+    /* float: right; */
+}
+#content.rsd-w-xlarge section.post{
+    width: 1162px;
+}
+
+/*********    carte    *********/
+
+#content.rsd-w-narrow section.post-carte {}
+#content.rsd-w-medium section.post-carte {}
+#content.rsd-w-large section.post-carte {}
+#content.rsd-w-xlarge section.post-carte {}
+
+div.rsd-w-narrow div.carte{}
+div.rsd-w-medium div.carte{}
+div.rsd-w-large div.carte{}
+div.rsd-w-xlarge div.carte{
+    width: 175px;
+}
+
+#content.rsd-w-narrow .carte_titre {
+    font-size: 41px;
+}
+#content.rsd-w-medium .carte_titre {
+    font-size: 30px;
+}
+#content.rsd-w-large .carte_titre {}
+#content.rsd-w-xlarge div.carte_titre {}
+
+
+/*********   to copy     *********/
+#xxxxxWrapper.rsd-w-narrow {}
+#xxxxxWrapper.rsd-w-medium {}
+#xxxxxWrapper.rsd-w-large {}
+#xxxxxWrapper.rsd-w-xlarge {}

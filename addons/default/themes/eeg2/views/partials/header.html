@@ -1,0 +1,64 @@
+<!-- Begin header -->
+<header id="header" class="rsd_w">
+	<!-- Begin logo -->
+	<div id="headerWrapper" class="rsd_w">
+		<div id="logo" class="rsd_w"></div>
+                <div id="title-img" class="rsd_w"><a href="{{ url:site  }}" title="{{ settings:site_name }}"></a></div>
+		<h1 id="site_title" class="rsd_w"><a href="{{ url:site  }}" title="Home">{{ settings:site_name }}</a></h1>
+		<h2 class="slogan rsd_w">{{ settings:site_slogan }}</h2>
+	</div>
+	<!-- End logo -->
+
+	<!-- Begin user meta -->
+	<div id="user-meta">
+            
+	{{ if user:logged_in }}
+        
+		<div class="avatar-name">
+		{{ if settings:enable_profiles }}
+			<a href="{{ url:site uri='my-profile' }}"> {{ user:display_name }}</a>
+		{{ else }}
+			{{ user:display_name }}
+		{{ endif }} 
+		</div>
+
+		{{ if settings:enable_profiles }}
+		<span class="nav-splitter">&nbsp;&bull;&nbsp;</span>
+		<a href="{{ url:site uri='edit-profile' }}">{{ helper:lang line="edit_profile_label" }}</a>
+		{{ endif }}
+
+		{{ if user:has_cp_permissions }}
+		<span class="nav-splitter">&nbsp;&bull;&nbsp;</span>
+		<a href="{{ url:site uri='admin' }}" target="_blank">{{ helper:lang line="global:control-panel" }}</a>
+		{{ endif }}
+
+		<span class="nav-splitter">&nbsp;&bull;&nbsp;</span>
+		<a href="{{ url:site uri='users/logout' }}">{{ helper:lang line="logout_label" }}</a>
+
+	{{ else }}
+        
+		<form action="{{ url:site uri='users/login' }}" method="post" accept-charset="utf-8" id="login-small">
+			<input type="hidden" name="redirect_to" value="{{ url:current }}" />
+			<ul>
+				<li class="email">
+					<input type="text" id="email" name="email" maxlength="120" placeholder="Identifiant" />
+				</li>
+
+				<li class="pword">
+					<input type="password" id="password" name="password" maxlength="20" placeholder="{{ helper:lang line="global:password" }}" />
+				</li>
+
+				<li class="form-buttons">
+					<input type="submit" value="{{ helper:lang line='user:login_btn' }}" name="btnLogin" /> | &nbsp;<a href="{{ url:site }}register">{{ helper:lang line="user_register_btn" }}</a>
+					<label><input type="checkbox" id="remember-checksidebar" name="remember" value="1"  /> {{ helper:lang line="user:remember" }}</label>
+				</li>
+			</ul>
+		</form>
+        
+	{{ endif }}
+        
+</div>
+<!-- End user meta -->
+</header>
+<!-- End header -->
+<noscript style="width: 100%;text-align: center; color: red;font-size: 30px;background-color: white;">Ce site neccessite JavaScript, veuillez l'activer!</noscript>

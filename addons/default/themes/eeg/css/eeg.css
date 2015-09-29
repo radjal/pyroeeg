@@ -1,0 +1,190 @@
+/* CSS basic for mobile first */
+@charset "utf-8";
+
+@import "../fonts/eraserdust.css";
+@import "../fonts/edwardian_script_itc.css";
+@import "../fonts/archistico_simple.css";
+@import "../fonts/archistico_bold.css";
+body {
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+	font-size: 1.4em;
+	margin: 0;
+	padding: 0;
+	background-color: #fff9cd;
+	border:none;
+	color: #908758;
+	background-image: url(../img/page-bckgrnd.gif);  background-repeat: repeat;  background-position: left top;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'ftq';
+	text-align: center;
+}
+a {
+    /* font-weight: bold; */  
+    color: #908758;
+}
+a:hover, a:focus{
+    font-weight: bold;  
+    /* color: #FF8500; */
+    color: #908758;
+}
+/************ header and top ************/
+#header {
+	background-color: #efe6ba;
+	/* padding: 10px; */
+	height: 88px;
+	background-image: url(../img/top-bckgrnd.gif);  /* background-color: transparent; */  background-repeat: repeat;  background-position: center top;
+}
+#site_navigation {
+    font-family: Archistico;
+    border-bottom: solid 2px #908758;  background-color: #efe6ba;
+    /* width: 100%; */
+}
+#site_navigation ul{
+    display: inline;     
+}
+#site_navigation li{
+    display: inline;
+    
+    padding: 10px;
+    font-size: 1.2em;
+}
+#top-logo {
+	display: none;;
+}
+#site_title {
+	font-family: 'ftq';
+	font-size: 2.5em;
+	font-weight: bold;
+	/* color: #908758; */
+	color: #f08012;
+	font-family: 'Edwardian Script ITC';
+}
+#site_slogan{
+    /* float: right; */
+    position: relative;
+    top: -18px;
+    /* left: 320px; */
+    /* width: 600px; */
+    font-size: 1.2em;
+    /* color: #908758; */
+}
+#top {
+    width: 100%;  
+    /* margin: auto; */  /* background-image: url(../img/top.jpg); */  
+    /* background-repeat: no-repeat; */
+    border-bottom: solid 2px #908758;
+    height: 89px;
+}
+/************ page central content ************/
+#content-wrapper {
+}
+#content {
+	padding: 10px;
+	/* background-color: #fff; */
+}
+/************ bottom and footer ************/
+#footer {
+    /* display: none; */
+    clear: both;
+    background-color: #efe6ba;
+    border-top: solid 2px #908758;
+}
+#bottom {
+	/* background-color: #efe6ba; */
+}
+#bottom-bar {
+}
+#bottom-menu {
+	color: white;
+	/* padding: 20px; */
+}
+#bottom-logo {
+    /* width: 50px; */
+}
+.homepage {
+	text-align:center;
+}
+/************ menu and other elements ************/
+/************ carte (blog)************/.semaine-titre, .carte-titre {}
+.semaine-jour {}
+.carte-info {
+    clear: both;
+}
+.commande {}
+.info-paiement {}
+#cartouche-wrapper { }
+/************ carte ************/
+#carte_wrapper{
+    /* margin: auto; */
+    width: 1340px;
+    /* position: relative; */
+    /* left: 0px; */
+    /* width: 100%; */
+    /* clear: both; */
+}
+.carte_separator{
+    width: 50%;
+    border-top: white solid 1px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+.carte_titre {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+}
+.carte {
+    float: right;
+    width: 264px;  
+    height: 431px;  
+    /* background-color: grey; */  margin: 2px;  padding: 10px;  background-image: url(../img/blackboard.png);  
+    /* background-repeat: no-repeat; */  
+    /* background-position: left top; */  
+    background-size: cover;
+    font-family: eraserdust;  color: white;  
+    font-size: 0.8em;
+    text-align: left;
+}
+.carte_element{
+    margin: 10px;
+}
+.carte input[type=number]{
+    width: 40px;
+    background-color: transparent;
+    border: white 1px dotted;
+    float: left;
+    /* margin-left: 30px; */
+    clear: both;
+    margin: 0 5px 0 5px;
+    padding: 2px;
+    text-align: center;
+}
+.carte-semaine-titre {
+    font-family: Archistico;
+    font-size: 2em;
+    text-align: center;
+}
+/* ---- form  overload ---- */
+form li	{
+	list-style-type: none;
+}
+
+/* ---- contact form ---- */
+#contact-form-wrapper {
+    width: 400px;
+    margin: auto;
+    text-align: left;
+}
+#contact-form-wrapper label {
+    width: 100px;
+}
+#contact-form-wrapper  input[type="text"]{
+    width: 177px;
+}
+#contact-form-wrapper textarea {
+    width: 400px;
+}

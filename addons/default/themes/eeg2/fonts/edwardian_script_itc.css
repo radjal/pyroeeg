@@ -1,0 +1,10 @@
+@font-face { 
+	font-family: 'Edwardian Script ITC'; 
+	src: url('edwardian_script_itc.eot'); 
+	src: url('edwardian_script_itc.eot?#iefix') format('embedded-opentype'), 
+	url('edwardian_script_itc.svg#Edwardian Script ITC') format('svg'), 
+	url('edwardian_script_itc.woff') format('woff'), 
+	url('edwardian_script_itc.ttf') format('truetype'); 
+	font-weight: normal; 
+	font-style: normal;
+}

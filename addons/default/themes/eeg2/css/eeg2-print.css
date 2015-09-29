@@ -1,0 +1,127 @@
+/* CSS for print */
+@charset "utf-8";
+/* */
+@import "../fonts/eraserdustregular.css";
+@import "../fonts/edwardian_script_itc.css";
+@import "../fonts/archistico_simple.css";
+@import "../fonts/archistico_bold.css";
+
+@media print {
+    body {
+            font-size: 1.8em;
+            background-color: white;
+            color: black;
+            background-image:none;  
+	}
+	a, a:link, p, .post, .post ul, .post ol, .post dl, .post dd, .post li {
+		font-family: eraserdustregular; 
+		font-weight:100;
+	}
+    h1, h2, h3, h4, h5, h6 {
+        /* font-family: 'Edwardian Script ITC'; */
+    
+        /* font-size: 23pt; */
+	}
+	#contentWrapper {
+    margin-top: -30px;
+	
+    width: 90%;
+    margin: auto;
+}
+    a, a:hover, a:focus, a:visited {
+        color: black;
+        font-weight: bold;  
+    }
+    p, div, span {
+        /* font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif; */
+		color:black;        
+  }
+    section.post ul li,  .post li, a, a:link{
+        /* font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif; */
+        font-weight: 100;
+    }
+	section.post {
+    background: none;
+	}
+
+	#headerWrapper {
+    width: 80%;  text-align: center;
+}
+	#site_title {
+    margin: auto;  
+    /* width: 80%; */  
+    /* text-align: center; */
+	}
+	.slogan {
+    color: black;
+    font-size: 14pt;  font-family: 'Edwardian Script ITC';
+    font-weight: 100;
+    float: right;
+}
+	#pageWrapper > header {
+		border:none;
+
+		display: block;
+	}
+	#logo {
+		display: none;
+}
+	.carte-semaine-titre {
+		font-family:  'Edwardian Script ITC'; 
+		font-size: 30pt;
+		/* text-align: center; */
+		display: inline;
+	}
+	#message-sante {
+		font-family:  'Edwardian Script ITC'; 
+		font-size: 18pt;
+	
+		color: black;
+		font-weight: 100;
+		margin-bottom: 12pt;
+}
+	#blackboard, #carte-view div {
+		font-family: eraserdustregular; 
+	}
+	#commande-total, .carte_separator {
+    /* font-weight: bold; */
+    font-size: 15pt;
+    font-weight: 100;
+	}
+	#commande-total {}
+	.carte-view .carte_element::first-letter {
+		font-size:0pt;
+	}
+	.carte_titre {
+		font-size: 20pt;
+		text-align: center;
+		border-bottom: solid 1px black;
+	
+		width: 80%;
+		margin: auto;
+}
+	#commande-form, #commande-form input, #commande-form textarea, #commande-form select {
+    background-color: transparent;
+    background: none;
+    background-image: none;
+    color: black;
+    padding: 5px 15px 5px 15px;  
+    font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif;  
+    font-size: 90%;  color: #7d7d7d;  text-shadow: 0px 0px 0px transparent;  
+    border: none;
+}
+	#site_title a {
+		font-size: 39pt;
+		font-family: 'Edwardian Script ITC';
+	
+		/* margin: auto; */
+		/* width: 80%; */
+		/* text-align: center; */
+}
+	#user-meta, #carte-nav-nextweek a, #commande-button,	nav, #head-nav , #footerWrapper, #listing-header, .pagination, section.post form input {
+		display:none; 
+	}
+	
+ 
+
+}

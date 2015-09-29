@@ -1,0 +1,256 @@
+/* base */
+body{
+    background-color: #ede8cf;
+    /* font-size: 26px; */
+}
+div.container {
+/* clear: both; */
+/* font-size: 26px; *//* padding: 25px; *//* float: none; */}
+header {
+    /* height: 42px; */
+    /* padding: 25px 42px; */
+    /* margin: auto; */
+    /* float: none; */
+}
+/* - */
+nav#primary ul li {
+padding: 15px 20px 10px 8px;*/;
+/* margin: 5px 20px 20px 8px; */
+}
+	.page {
+    width: 90%;
+}
+
+#content { /* padding: 25px; *//* margin: 20px; */}
+.blockquote {
+    /* padding: 15px; */
+    /* padding-left: 90px; */
+    display: block;
+    font-style: italic;
+    clear: both;
+    float: none;
+    position: relative;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.greentext {
+    color: #8aac1a;
+}
+/* exemple */
+.liste-exemple_produits li, .recette-liste_ingredients li {
+    border-bottom: #8AAC1A dotted 1px;
+    list-style: none;
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 2px;
+    /* font-size: large; */
+    /* line-height: 30px; */
+    font-weight: bold;
+    margin: 0 2px 0 0;
+}
+.liste-exemple_produits {
+    font-size: smaller;
+    /* border-bottom: #8AAC1A dotted 1px; */
+    /* list-style: none; */
+    /* font-family: 'Satisfy', cursive; */
+}
+.liste-exemple_container {
+    font-size: larger;
+    font-style: italic;
+    /* font-family: 'Satisfy', cursive; */
+}
+/* recette */
+#zone-ex_recette {
+    clear: both;
+}
+.panier-container {
+    background-color: #F9F5E5;
+}
+.recette-titre {}
+.recette-ingredients {
+    /* width: 50%; */
+    /* min-width: 200px; */
+    /* float: left; */
+    clear: both;
+}
+.recette-liste_ingredients li{}
+.recette-prepa {
+    /* width: 50%; */
+    /* min-width: 200px; */
+    /* float: right; */
+}
+.recette-prepa li {
+    list-style: inherit;
+}
+.recette-remarque {
+    /* width: 24%; */
+    /* min-width: 200px; */
+    /* float: right; */
+    /* font-size: x-small; */
+}
+.recette-titre h3 {
+    /* float: left; */
+    /* max-width: 48%; */
+}
+.recette-titre img {
+    /* width: 300px; */
+    max-width: 100%;
+    float: right;
+}
+/* - */
+.widget.facebook_like, .widget.html {
+    /* clear: both; */
+    /* max-width: 560px; */
+    /* margin: auto; */
+    /* float: left; */
+    /* color: #A0976D; */
+}
+.contain {
+    max-width: 560px;
+    margin: auto;
+}
+footer .widget.facebook_like, footer .widget.html {
+    /* clear: both; */
+    /* width: 100%; */
+    /* max-width: 560px; */
+    /* margin: auto; */
+    float: left;
+}
+input.short-input{
+    width: 86%;
+}
+/* panier */
+.contact-button input {
+background-color: #96b633;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#bada55), to(#96b633));
+    background-image: -moz-linear-gradient(#bada55, #96b633);
+    background-image: -ms-linear-gradient(#bada55, #96b633);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bada55), color-stop(100%, #96b633));
+    background-image: -webkit-linear-gradient(#bada55, #96b633);
+    background-image: -o-linear-gradient(#bada55, #96b633);
+    background-image: linear-gradient(#bada55, #96b633);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #7b9b18;
+color: white;font-size: 18px;padding: 11px;}
+.contact-button input:hover{
+    background-color: #bada55;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#96b633), to(#bada55));
+    background-image: -moz-linear-gradient(#96b633, #bada55);
+    background-image: -ms-linear-gradient(#96b633, #bada55);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bada55), color-stop(100%, #bada55));
+    background-image: -webkit-linear-gradient(#96b633, #bada55);
+    background-image: -o-linear-gradient(#96b633, #bada55);
+    background-image: linear-gradient(#96b633, #bada55);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #7b9b18;
+	}
+
+.panier-container, #recette-container {
+/* max-width: 49%; *//* float: left; */margin: 5px;background-color: #F9F5E5;padding: 10px;border: #C5A468 solid 1px;/* height: 100%; */}
+.zone-panier1, .zone-panier2 {
+    /* width: 100%; */
+    /* float: left; */
+    margin: 5px;
+    background-color: #E8E4CB;
+    /* overflow: scroll; */
+    text-align: center;
+    padding: 3px;
+    border: #A9884B solid 1px;
+}
+.zone-panier1 img, .zone-panier2 img {
+    max-width: 180px;
+    max-height: 74%;
+    /* image-rendering: AUTO; */
+    width: 62%;
+} 
+#panier-container {
+    max-width: 640px;
+    margin: auto;
+    /* clear: both; */
+}
+#panier-description {
+    /* float: left; */
+}
+#panier-prix {
+font-size: xx-large;/* float: right; */padding: 20px; width:50%; width: 200px;      height: 200px;      -moz-border-radius: 50%;       -webkit-border-radius: 50%;       border-radius: 50%;      /* background: #B3C62C; */}
+#panier-image {}
+#panier-prix:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #B3C62C;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+#panier-prix div {
+    float: left;
+    width:100%;
+    padding-top: 42%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color: #6B542A;
+}
+#panier-offre {
+    /* float: left; */
+    clear: both;
+}
+#panier-offre_date_fin {
+font-size: x-large;vertical-align: sub;}
+#panier-informations {
+font-size: small;/* float: left; *//* clear: both; */margin-bottom: 50px;}
+#panier-liste {
+/* clear: both; *//* padding: 20px; *//* float: right; *//* clear: both; */}
+/* commande */
+.#commande_container {
+max-width: 560px;float: left;/* margin: 10px; */}
+#commande-panier1{}
+#commande-panier2{}
+#commande-all {
+max-width: 560px;margin: auto;text-align: left;}
+#commande-section1 {
+    width: 270px;
+    /* width: 50%; */
+    float: left;
+    margin: 5px;
+}
+#commande-section2 {
+    width: 270px;
+    /* width: 50%; */
+    float: left;
+    margin: 5px;
+}
+#commande-section3 {
+    /* width: 270px; */
+    /* float: left; */
+    clear: both;
+    margin: 5px;
+}
+#commande-section4 {
+    /* width: 270px; */
+    margin: 5px;
+}
+/* form customizing */
+form .error {
+    color: darkred;
+    display: inline;
+}
+.contact-form select {
+    /* width: 98%; */
+    padding: 5px;
+    outline: 3px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.contact-form .accesscode,   .contact-form .codepostal {
+    max-width: 200px;
+    width: 30%;
+}
+/* admin */
+.adminbox {
+    margin: 20px;
+    clear: both;
+}

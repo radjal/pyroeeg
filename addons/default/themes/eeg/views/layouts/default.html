@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		{{ theme:partial name="metadata" }}
+		
+		<!-- Google Analytics -->
+		{{ integration:analytics }}
+	</head>
+	<body class="rd">
+		<!-- Global container -->
+			<div id="container" class="rd">
+			<!-- Header -->
+			<header>
+				{{ theme:partial name="header" }}
+			</header>
+			<!-- Content -->
+			<div id="wrapper" class="rd">
+			  <div id="content-wrapper" class="rd">
+			  	{{ theme:partial name="breadcrumbs" }}
+				{{ session:messages success="success-box" notice="notice-box" error="error-box" }}
+				<div id="content" class="rd">
+				{{ template:body }}
+				</div>
+			  </div>
+			</div>
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<!--{  theme:partial name="sidebar" }-->
+			</div>
+			<!-- Footer -->
+			<footer>
+				{{ theme:partial name="footer" }}
+			</footer>
+		</div>
+	<!-- ================================================== -->
+    <script src="{{ asset:js_path file="theme::jquery.min.js" }}" type="text/javascript"></script>
+    <script>
+
+        /* custom */
+        function adaptStyle() {
+                var $scrWidth = $(window).width();
+                var $scrHeight = $(window).height();
+                var $scrollTop = $(window).scrollTop();
+                var $infoText = $scrWidth + 'px x ' + $scrHeight + 'px <br />Scroll : ' + $scrollTop + 'px <br> ' + navigator.userAgent ;
+                if ( $scrWidth >= 960) {
+                        $('.rd').addClass('desktop');
+                } else if  ($scrWidth < 960) {		
+                                $('.rd').removeClass('desktop');
+                }
+                //alert($infoTxt);
+                return $infoText;
+        }
+        
+        // Execute on load
+        $(document).ready(adaptStyle());
+        // Bind event listener
+        $(window).resize(function() {
+                try
+                  {
+                  adaptStyle();
+                  }
+                catch(err)
+                  {
+                  txt="There was an error on this page.\n\n";
+                  txt+="Error description: " + err.message + "\n\n";
+                  txt+="Click OK to continue.\n\n";
+                  alert(txt);
+                  }
+                }
+        );
+
+        /*** sniff the UA of the client and show hidden div's for that device ***/
+        var customizeForDevice = function(){
+                var ua = navigator.userAgent;
+                var checker = {
+                  iphone: ua.match(/(iPhone|iPod|iPad)/),
+                  blackberry: ua.match(/BlackBerry/),
+                  android: ua.match(/Android/)
+                };
+                if (checker.android){
+                        $('.android-only').show();
+                }
+                else if (checker.iphone){
+                        $('.idevice-only').show();
+                }
+                else if (checker.blackberry){
+                        $('.berry-only').show();
+                }
+                else {
+                        $('.unknown-device').show();
+                }
+        }
+    </script>
+	</body>
+</html>

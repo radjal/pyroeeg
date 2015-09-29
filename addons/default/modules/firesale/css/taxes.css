@@ -1,0 +1,8 @@
+
+thead tr th .actions {
+	float: right;
+}
+
+input[type="text"] {
+    width: 53px !important;
+}

@@ -1,0 +1,23 @@
+{{ if theme:options:layout == 'full-width' OR ( theme:options:layout == 'full-width-home' AND page:is_home == true ) }}
+	<!-- Begin full width content -->
+	<div  id="content" class="home-content rsd_w">
+            <div id="headerWidgets">{{ widgets:area slug="topwidget" }}</div>
+{{ else }}
+	<!-- Begin 2 column content -->
+        <div id="content" class="rsd_w">
+{{ endif }}
+	<div>
+	{{ session:messages success="success-box" notice="notice-box" error="error-box" }}
+        </div>
+
+<div id="content-double" class="rsd_w">            
+	<section class="post {{ if { url:segments segment="1" } == 'carte' }}carte-post{{ endif }}">
+		{{ template:body }}
+	</section>
+        
+         <div id="bottomWidgets" class="rsd_w">{{ widgets:area slug="bottomwidgets" }}</div>
+        </div>
+         
+        <div id="sideWidgets"  class="rsd_w">{{ widgets:area slug="sidewidgets" }}</div>        
+    </div>
+         

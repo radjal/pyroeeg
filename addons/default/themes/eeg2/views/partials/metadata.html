@@ -1,0 +1,48 @@
+<!-- Begin meta tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<base href="{{ url:base }}" />
+<meta name="author" content="Spelldesign.fr" />
+<meta name="copyright" content="Equilibre & gourmandise" />
+<meta name="distribution" content="global" />
+<meta name="resource-type" content="document" />
+<meta name="language" content="{{ lang:code }}" />
+
+{{ template:metadata }}
+
+
+
+<!-- Use Html5Shiv in order to allow IE render HTML5 -->
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- Begin scripts -->
+{{ asset:js file="jquery/jquery.js" }}
+{{ asset:js file="responsive.js" }}
+
+{{ asset:render }}
+<!-- End scripts -->
+
+<link href="{{ asset:css_url file="theme::reset.css" }}" rel="stylesheet" type="text/css" media="all" >
+<link href="{{ asset:css_url file="theme::typo.css" }}" rel="stylesheet" type="text/css" media="all" >
+<link href="{{ asset:css_url file="theme::global.css" }}" rel="stylesheet" type="text/css" media="all" >
+<link href="{{ asset:css_url file="theme::eeg2.css" }}" rel="stylesheet" type="text/css" media="screen" >
+<link href="{{ asset:css_url file="theme::eeg2-desktop.css" }}" rel="stylesheet" type="text/css" media="screen" >
+
+<link href="{{ asset:css_url file="theme::adapt.css" }}" rel="stylesheet" type="text/css" media="screen" >
+<link href="{{ asset:css_url file="theme::eeg2-print.css" }}" rel="stylesheet" type="text/css" media="print" >
+
+
+<!-- Place CSS bug fixes for IE 7 in this comment -->
+<!--[if IE 7]>
+{{ theme:css file="ie.css" }}
+<![endif]-->
+
+<title>{{ settings:site_name }}&nbsp;&bull;&nbsp;{{ template:title }}</title>
+
+<!-- icons for iPhone -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset:image_url file="theme::ico/apple-touch-icon-114-precomposed.png" }}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset:image_url file="theme::ico/apple-touch-icon-72-precomposed.png" }}">
+<link rel="apple-touch-icon-precomposed" href="{{ asset:image_url file="theme::ico/apple-touch-icon-57-precomposed.png" }}">
+<link rel="shortcut icon" href="{{ asset:image_url file="theme::ico/favicon.png" }}">
+
+
+    

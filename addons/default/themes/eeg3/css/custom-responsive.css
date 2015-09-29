@@ -1,0 +1,208 @@
+/* iPad portrait */
+
+/* Small tablet portrait */
+@media only screen and (min-width: 641px) {
+    body{
+        background: url(../img/background.jpg);
+        background-color: #ede8cf;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-position: bottom right; */
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+        /* clear: both; */
+    }
+	header {
+    height: 42px;
+    padding: 25px;
+ }
+	nav#primary ul li {
+    padding: 36px 8px 47px 8px;
+	}
+	#content { padding:25px;}
+	.page {
+    width: 100%;
+}
+    footer ul li{
+		display: inline;
+		padding-right: 5px;
+	}
+		.panier-container {
+	    /* max-width: 49%; */
+	    /* width: 47%; */
+	    /* float: left; */
+	    min-height: 227px;
+	    font-size: larger;
+	    font-family: 'Satisfy', cursive;
+	}
+		.zone-panier1, .zone-panier2 {
+		width: 197px;
+		width: d;
+		/* min-height: 250px; */
+		/* height: 260px; */
+		/* line-height: 0px; */
+		float: left;
+	}
+	.recette-titre h3 {
+    float: left;
+    max-width: 48%;
+}
+.recette-titre img {
+    width: 300px;
+    max-width: 50%;
+    float: right;
+}
+
+}
+
+@media only screen and (min-width: 769px) {
+	#zone-panier_container {
+	width: 48%;
+	width: 248px;
+	/* max-width: 49%; */
+	/* height: 280px; */
+	/* min-height: 410px; */
+	float: right;
+	/* min-height: 250px; */
+	}
+	.panier-container {
+	    /* max-width: 49%; */
+	    width: 47%;
+	    width: 310px;
+	    float: left;
+	    min-height: 227px;
+	    min-height: 410px;
+	    font-size: larger;
+	    font-family: 'Satisfy', cursive;
+	    /* border: #C5A468 solid 1px; */
+	}
+	.zone-panier1, .zone-panier2 {
+		width: 230px;
+		/* min-height: 250px; */
+		height: 228px;
+		/* line-height: 0px; */
+		float: left;
+	}
+	#panier-prix{
+    float: right;
+    margin-top: 40px;
+}
+	#panier-description {
+    /* float: left; */
+    /* width: 45%; */
+    clear: both;
+  }
+	 #recette-container {}
+	.recette-titre {
+    /* float: left; */
+    /* clear: both; */
+}
+	.recette-ingredients {
+		width: 45%;
+		/* min-width: 200px; */
+		float: right;
+	}
+	.recette-liste_ingredients li{
+    line-height: 28px;
+    font-size: larger;
+}
+	.recette-prepa {
+		width: 54%;
+		/* min-width: 200px; */
+		/* float: right; */
+		/* clear: left; */
+		font-size: medium;
+	}
+.recette-prepa li {}
+	.recette-remarque {
+    /* font-size: x-small; */
+}
+
+		 .liste-exemple_produits li {
+		font-size: large;
+		line-height: 30px;
+	}
+#panier-image {
+    float: left;
+    /* width: 63%; */
+    /* height: 260px; */
+}
+	 
+	 .blockquote {
+    padding: 15px;
+    padding-left: 90px;
+    /* display: block; */
+    /* font-style: italic; */
+    /* clear: both; */
+    /* float: none; */
+    /* position: relative; */
+    /* border-top: 1px solid transparent; */
+    /* border-bottom: 1px solid transparent; */
+ }
+	.blockquote:before {
+		left: 30px;
+		content: '"';
+		font-size: 30px;
+		position: absolute;
+		right: 10px;
+		top: 35%;
+	}
+	#commande-panier1{
+    float: left;
+    width: 45%;
+}
+	#commande-panier2{
+    float: right;
+    width: 45%;
+}
+}
+
+/* Small browser / iPad landscape */
+@media only screen and (min-width: 1025px) {
+	#zone-panier_container {
+	/* width: 48%; */
+	width: 410px;
+	/* max-width: 49%; */
+	/* height: 280px; */
+	/* min-height: 410px; */
+	float: right;
+	/* min-height: 250px; */
+	}	.panier-container {
+	    /* max-width: 49%; */
+	    width: 468px;
+	    float: left;
+	    min-height: 227px;
+	    min-height: 508px;
+	    font-size: larger;
+	    font-family: 'Satisfy', cursive;
+	}
+	.zone-panier1, .zone-panier2 {
+		/* width: 100%; */
+		width: 392px;
+		/* min-height: 410px; */
+		height: 100%;
+		/* line-height: 0px; */
+		/* border: #A9884B solid 1px; */
+	}
+		.liste-exemple_produits li {
+
+		line-height: 40px;
+	}
+}
+
+/* Generic browser */
+@media only screen and (min-width: 1281px) {}
+
+/* Large browser */
+@media only screen and (min-width: 1600px) {
+	#zone-panier_container{
+		margin-right: 100px;
+	}
+	.panier-container {
+		margin-left: 100px;
+	}
+	.liste-exemple_produits li {
+
+		line-height: 40px;
+	}
+}

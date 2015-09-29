@@ -1,0 +1,44 @@
+<!-- Begin footer -->
+<div id="footerWrapper">
+<div id="footerWidgets" class="rsd_w animate">{{ widgets:area slug="footer" }}</div>
+<div class="clearfix"></div>
+<footer id="footer" class="rsd_w animate">
+    
+	<ul id="foot-nav">
+		{{ navigation:links group="footer" }}
+		<li><a class="last" href="{{ url:current }}#top" title="{{ helper:lang line="back_to_top" }}">{{ helper:lang line="top_page" }} &uarr;</a></li>
+		<li>&copy;{{ helper:date format="Y" }} {{ settings:site_name }}. {{ helper:lang line="all_right_reserved" }}</li>
+	</ul>
+  {{ asset:image file="theme::hatandveggies.png" alt="Equilibre et gourmandise, traiteur sur Bondoufle, Evry, Ste Genviève"  id="logo-footer" style="display:none" }}
+  </footer>
+</div>
+<!-- End footer -->
+<!-- Begin scripts -->
+{{ theme:js file="localscroll.js" }}
+{{ theme:js file="scrollto.js" }}
+{{ theme:js file="easing.js" }}
+{{ theme:js file="global.js" }}
+<!-- End scripts -->
+<script type="text/javascript"><!--
+            // Execute on load
+        $(document).ready(function () {
+                        adaptStyle();
+                        // Bind event listener  
+                      $(window).resize(function() {
+                                 try
+                                  {
+                                      resetStyle();
+                                      adaptStyle();
+                                  }
+                                catch(err)
+                                  {
+                                  txt="There was an error on this page.\n\n";
+                                  txt+="Error description: " + err.message + "\n\n";
+                                  txt+="Click OK to continue.\n\n";
+                                  alert(txt);
+                                  }
+                }
+                );
+        });
+        -->
+</script>
