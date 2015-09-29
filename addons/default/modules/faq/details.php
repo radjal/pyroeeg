@@ -38,7 +38,19 @@ class Module_Faq extends Module
                             'class' => 'add'
                         )
                     )
-                )
+                ),
+                'fields' => array(
+                    'name' => 'global:custom_fields',
+                    'uri' => 'admin/faq/fields/index',
+                    'shortcuts' => array(
+                        'create' => array(
+                            'name' => 'streams:add_field',
+                            'uri' => 'admin/faq/fields/create',
+                            'class' => 'add'
+                        )
+                    )
+                ),
+                
             )
         );
     }

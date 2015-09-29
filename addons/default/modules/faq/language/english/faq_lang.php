@@ -22,3 +22,6 @@ $lang['faq:view_options']               = 'View Options';
 $lang['faq:field_assignments']          = 'Field Assignments';
 $lang['faq:new_assignment']          	= 'New Field Assignment';
 $lang['faq:edit_assignment']          	= 'Edit Field Assignment';
+
+$lang['faq:fields']          	= 'Fields';
+
