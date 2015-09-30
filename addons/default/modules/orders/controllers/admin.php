@@ -18,21 +18,21 @@
 class Admin extends Admin_Controller
 {
     // This will set the active section tab
-    protected $section = 'faq';
+    protected $section = 'order';
 
     public function __construct()
     {
         parent::__construct();
 
-        $this->lang->load('faq');
+        $this->lang->load('order');
         $this->load->driver('Streams');
     }
 
     /**
-     * List all FAQs using Streams CP Driver
+     * List all Orders using Streams CP Driver
      *
      * We are using the Streams API to grab
-     * data from the faqs database. It handles
+     * data from the orders database. It handles
      * pagination as well.
      *
      * @return	void
@@ -45,7 +45,7 @@ class Admin extends Admin_Controller
 
         // The title can be a string, or a language
         // string, prefixed by lang:
-        $extra['title'] = 'lang:faq:faqs';
+        $extra['title'] = 'lang:order:order';
         
         // We can customize the buttons that appear
         // for each row. They point to our own functions
@@ -54,11 +54,11 @@ class Admin extends Admin_Controller
         $extra['buttons'] = array(
             array(
                 'label' => lang('global:edit'),
-                'url' => 'admin/faq/edit/-entry_id-'
+                'url' => 'admin/order/edit/-entry_id-'
             ),
             array(
                 'label' => lang('global:delete'),
-                'url' => 'admin/faq/delete/-entry_id-',
+                'url' => 'admin/order/delete/-entry_id-',
                 'confirm' => true
             )
         );
@@ -67,11 +67,11 @@ class Admin extends Admin_Controller
         // signals the function to use the template library to build the page
         // so we don't have to. If we had that set to false, the function
         // would return a string with just the form.
-        $this->streams->cp->entries_table('faqs', 'faq', 3, 'admin/faq/index', true, $extra);
+        $this->streams->cp->entries_table('order', 'order', 3, 'admin/order/index', true, $extra);
     }
 
     /**
-     * List all FAQs (Alternate)
+     * List all Orders (Alternate)
      *
      * This example is similar to index(), but we are
      * getting entries manually using the entries API
@@ -84,13 +84,13 @@ class Admin extends Admin_Controller
         // Get our entries. We are simply specifying
         // the stream/namespace, and then setting the pagination up.
         $params = array(
-            'stream' => 'faqs',
-            'namespace' => 'faq',
+            'stream' => 'order',
+            'namespace' => 'order',
             'paginate' => 'yes',
             'limit' => 4,
             'pag_segment' => 4
         );
-        $data['faqs'] = $this->streams->entries->get_entries($params);
+        $data['order'] = $this->streams->entries->get_entries($params);
 
         // Build the page. See views/admin/index.php
         // for the view code.
@@ -110,13 +110,13 @@ class Admin extends Admin_Controller
     public function create()
     {
         $extra = array(
-            'return' => 'admin/faq',
-            'success_message' => lang('faq:submit_success'),
-            'failure_message' => lang('faq:submit_failure'),
-            'title' => 'lang:faq:new',
+            'return' => 'admin/order',
+            'success_message' => lang('order:submit_success'),
+            'failure_message' => lang('order:submit_failure'),
+            'title' => 'lang:order:new',
          );
 
-        $this->streams->cp->entry_form('faqs', 'faq', 'new', null, true, $extra);
+        $this->streams->cp->entry_form('order', 'order', 'new', null, true, $extra);
     }
     
     /**
@@ -133,13 +133,13 @@ class Admin extends Admin_Controller
     public function edit($id = 0)
     {
         $extra = array(
-            'return' => 'admin/faq',
-            'success_message' => lang('faq:submit_success'),
-            'failure_message' => lang('faq:submit_failure'),
-            'title' => 'lang:faq:edit'
+            'return' => 'admin/order',
+            'success_message' => lang('order:submit_success'),
+            'failure_message' => lang('order:submit_failure'),
+            'title' => 'lang:order:edit'
         );
 
-        $this->streams->cp->entry_form('faqs', 'faq', 'edit', $id, true, $extra);
+        $this->streams->cp->entry_form('order', 'order', 'edit', $id, true, $extra);
     }
 
     /**
@@ -150,10 +150,10 @@ class Admin extends Admin_Controller
      */
     public function delete($id = 0)
     {
-        $this->streams->entries->delete_entry($id, 'faqs', 'faq');
-        $this->session->set_flashdata('error', lang('faq:deleted'));
+        $this->streams->entries->delete_entry($id, 'order', 'order');
+        $this->session->set_flashdata('error', lang('order:deleted'));
  
-        redirect('admin/faq/');
+        redirect('admin/order/');
     }
 
 }

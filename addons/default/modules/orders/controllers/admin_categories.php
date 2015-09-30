@@ -23,13 +23,13 @@ class Admin_categories extends Admin_Controller
     {
         parent::__construct();
 
-        $this->lang->load('faq');
+        $this->lang->load('order');
 
         $this->load->driver('Streams');
     }
 
     /**
-     * List all FAQs using Streams CP Driver
+     * List all Orders using Streams CP Driver
      *
      * In this alternate index, we are using the
      * Streams API driver to 
@@ -39,35 +39,35 @@ class Admin_categories extends Admin_Controller
      */
     public function index()
     {
-        $extra['title'] = 'lang:faq:categories';
+        $extra['title'] = 'lang:order:categories';
         
         $extra['buttons'] = array(
             array(
                 'label' => lang('global:edit'),
-                'url' => 'admin/faq/categories/edit/-entry_id-'
+                'url' => 'admin/order/categories/edit/-entry_id-'
             ),
             array(
                 'label' => lang('global:delete'),
-                'url' => 'admin/faq/categories/delete/-entry_id-',
+                'url' => 'admin/order/categories/delete/-entry_id-',
                 'confirm' => true
             )
         );
 
-        $this->streams->cp->entries_table('categories', 'faq', 3, 'admin/faq/categories/index', true, $extra);
+        $this->streams->cp->entries_table('categories', 'order', 3, 'admin/order/categories/index', true, $extra);
     }
 
     public function create()
     {
-		$extra['title'] = 'lang:faq:new';
+		$extra['title'] = 'lang:order:new';
 
         $extra = array(
-            'return' => 'admin/faq/categories/index',
-            'success_message' => lang('faq:submit_success'),
-            'failure_message' => lang('faq:submit_failure'),
-            'title' => lang('faq:categories:new')
+            'return' => 'admin/order/categories/index',
+            'success_message' => lang('order:submit_success'),
+            'failure_message' => lang('order:submit_failure'),
+            'title' => lang('order:categories:new')
         );
 
-        $this->streams->cp->entry_form('categories', 'faq', 'new', null, true, $extra);
+        $this->streams->cp->entry_form('categories', 'order', 'new', null, true, $extra);
     }
 
    /**
@@ -78,16 +78,16 @@ class Admin_categories extends Admin_Controller
      */
     public function edit($id = 0)
     {
-        $this->template->title(lang('faq:edit'));
+        $this->template->title(lang('order:edit'));
 
         $extra = array(
-            'return' => 'admin/faq/categories/index',
-            'success_message' => lang('faq:submit_success'),
-            'failure_message' => lang('faq:submit_failure'),
-            'title' => lang('faq:edit')
+            'return' => 'admin/order/categories/index',
+            'success_message' => lang('order:submit_success'),
+            'failure_message' => lang('order:submit_failure'),
+            'title' => lang('order:edit')
         );
 
-        $this->streams->cp->entry_form('categories', 'faq', 'edit', $id, true, $extra);
+        $this->streams->cp->entry_form('categories', 'order', 'edit', $id, true, $extra);
     }
 
     // --------------------------------------------------------------------------
@@ -105,9 +105,9 @@ class Admin_categories extends Admin_Controller
      */
     public function delete($id = 0)
     {
-        $this->streams->entries->delete_entry($id, 'categories', 'faq');
-        $this->session->set_flashdata('error', lang('faq:deleted'));
-        redirect('admin/faq/categories/index');
+        $this->streams->entries->delete_entry($id, 'categories', 'order');
+        $this->session->set_flashdata('error', lang('order:deleted'));
+        redirect('admin/order/categories/index');
     }
 
 }

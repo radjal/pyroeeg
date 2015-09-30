@@ -2,35 +2,35 @@
 
 <h2>{{ template:title }}</h2>
 
-{{ if faqs.total > 0 }}
-<div id="faq">
-    <h3>{{ helper:lang line="faq:questions" }}</h3>
+{{ if orders.total > 0 }}
+<div id="order">
+    <h3>{{ helper:lang line="order:questions" }}</h3>
     {{ pagination:links }}
     <div id="questions">
         <ol>
-            {{ faqs.entries }}
-            <li>{{ url:anchor segments="faq/#{{ id }}" title="{{ question }}" class="question" }}</li>
-            {{ /faqs.entries }}
+            {{ orders.entries }}
+            <li>{{ url:anchor segments="order/#{{ id }}" title="{{ question }}" class="question" }}</li>
+            {{ /orders.entries }}
         </ol>
     </div>
     <div id="answers">
-        <h3>{{ helper:lang line="faq:answers" }}</h3>
+        <h3>{{ helper:lang line="order:answers" }}</h3>
         <ol> 
-            {{ faqs.entries }}
+            {{ orders.entries }}
             <li class="answer">
                 <h4 id="{{ id }}">{{ question }}</h4>
                 <p>{{ answer }}</p>
             </li>
-            {{ /faqs.entries }}
+            {{ /orders.entries }}
         </ol>
     </div>
 </div>
 {{ else }}
-<h4>{{ helper:lang line="faq:no_faqs" }}</h4>
+<h4>{{ helper:lang line="order:no_orders" }}</h4>
 {{ endif }}
 
 </div>
 
 <?php 
-//var_dump($faqs) ; 
+//var_dump($orders) ; 
 ?>

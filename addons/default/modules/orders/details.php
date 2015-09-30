@@ -17,35 +17,35 @@ class Module_Orders extends Module
             'backend' => true,
             'menu' => 'content',
             'sections' => array(
-                'faq' => array(
-                    'name' => 'faq:faqs',
-                    'uri' => 'admin/faq',
+                'order' => array(
+                    'name' => 'order:order',
+                    'uri' => 'admin/order',
                     'shortcuts' => array(
                         'create' => array(
-                            'name' => 'faq:new',
-                            'uri' => 'admin/faq/create',
+                            'name' => 'order:new',
+                            'uri' => 'admin/order/create',
                             'class' => 'add'
                         )
                     )
                 ),
                 'categories' => array(
-                    'name' => 'faq:categories',
-                    'uri' => 'admin/faq/categories/index',
+                    'name' => 'order:categories',
+                    'uri' => 'admin/order/categories/index',
                     'shortcuts' => array(
                         'create' => array(
-                            'name' => 'faq:category:new',
-                            'uri' => 'admin/faq/categories/create',
+                            'name' => 'order:category:new',
+                            'uri' => 'admin/order/categories/create',
                             'class' => 'add'
                         )
                     )
                 ),
                 'fields' => array(
                     'name' => 'global:custom_fields',
-                    'uri' => 'admin/faq/fields/index',
+                    'uri' => 'admin/order/fields/index',
                     'shortcuts' => array(
                         'create' => array(
                             'name' => 'streams:add_field',
-                            'uri' => 'admin/faq/fields/create',
+                            'uri' => 'admin/order/fields/create',
                             'class' => 'add'
                         )
                     )
@@ -67,23 +67,23 @@ class Module_Orders extends Module
         // do data setup.
         $this->load->driver('Streams');
 
-        $this->load->language('faq/faq');
+        $this->load->language('orders/order');
 
-        // Add faqs streams
-        if ( ! $this->streams->streams->add_stream('lang:faq:faqs', 'faqs', 'faq', 'faq_', null)) return false;
-        if ( ! $categories_stream_id = $this->streams->streams->add_stream('lang:faq:categories', 'categories', 'faq', 'faq_', null)) return false;
+        // Add orders streams
+        if ( ! $this->streams->streams->add_stream('lang:order:order', 'order', 'order', 'order_', null)) return false;
+        if ( ! $categories_stream_id = $this->streams->streams->add_stream('lang:order:categories', 'categories', 'order', 'order_', null)) return false;
 
-        //$faq_categories
+        //$order_categories
 
         // Add some fields
         $fields = array(
             array(
                 'name' => 'Question',
                 'slug' => 'question',
-                'namespace' => 'faq',
+                'namespace' => 'order',
                 'type' => 'text',
                 'extra' => array('max_length' => 200),
-                'assign' => 'faqs',
+                'assign' => 'order',
                 'title_column' => true,
                 'required' => true,
                 'unique' => true
@@ -91,15 +91,15 @@ class Module_Orders extends Module
             array(
                 'name' => 'Answer',
                 'slug' => 'answer',
-                'namespace' => 'faq',
+                'namespace' => 'order',
                 'type' => 'textarea',
-                'assign' => 'faqs',
+                'assign' => 'order',
                 'required' => true
             ),
             array(
                 'name' => 'Title',
-                'slug' => 'faq_category_title',
-                'namespace' => 'faq',
+                'slug' => 'order_category_title',
+                'namespace' => 'order',
                 'type' => 'text',
                 'assign' => 'categories',
                 'title_column' => true,
@@ -108,29 +108,29 @@ class Module_Orders extends Module
             ),
             array(
                 'name' => 'Category',
-                'slug' => 'faq_category_select',
-                'namespace' => 'faq',
+                'slug' => 'order_category_select',
+                'namespace' => 'order',
                 'type' => 'relationship',
-                'assign' => 'faqs',
+                'assign' => 'order',
                 'extra' => array('choose_stream' => $categories_stream_id)
             )
         );
 
         $this->streams->fields->add_fields($fields);
 
-        $this->streams->streams->update_stream('faqs', 'faq', array(
+        $this->streams->streams->update_stream('order', 'order', array(
             'view_options' => array(
                 'id',
                 'question',
                 'answer',
-                'faq_category_select'
+                'order_category_select'
             )
         ));
 
-        $this->streams->streams->update_stream('categories', 'faq', array(
+        $this->streams->streams->update_stream('categories', 'order', array(
             'view_options' => array(
                 'id',
-                'faq_category_title'
+                'order_category_title'
             )
         ));
 
@@ -149,7 +149,7 @@ class Module_Orders extends Module
 
         // For this teardown we are using the simple remove_namespace
         // utility in the Streams API Utilties driver.
-        $this->streams->utilities->remove_namespace('faq');
+        $this->streams->utilities->remove_namespace('order');
 
         return true;
     }

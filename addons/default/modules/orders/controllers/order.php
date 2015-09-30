@@ -11,15 +11,15 @@ class Faq extends Public_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->lang->load('faq');
+        $this->lang->load('order');
         $this->load->driver('Streams');
-        $this->template->append_css('module::faq.css');
+        $this->template->append_css('module::order.css');
     }
      /**
-     * List all FAQs
+     * List all Orders
      *
      * We are using the Streams API to grab
-     * data from the faqs database. It handles
+     * data from the orders database. It handles
      * pagination as well.
      *
      * @access	public
@@ -28,20 +28,20 @@ class Faq extends Public_Controller
     public function index()
     {
         $params = array(
-            'stream' => 'faqs',
-            'namespace' => 'faq',
+            'stream' => 'order',
+            'namespace' => 'order',
             'paginate' => 'yes',
             'pag_segment' => 4
         );
 
-        $this->faqs = $this->streams->entries->get_entries($params);
-//        var_dump($this->faqs);
+        $this->orders = $this->streams->entries->get_entries($params);
+//        var_dump($this->orders);
         // Build the page
         $this->template->title($this->module_details['name'])
-                ->set('faqs', $this->faqs )
+                ->set('order', $this->orders )
                 ->build('index', $this);
     }
 
 }
 
-/* End of file faq.php */
+/* End of file order.php */
